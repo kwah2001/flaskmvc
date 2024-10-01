@@ -4,16 +4,16 @@ from App.models import Student
 from App.database import db
 
 #add review to a specific student
-def add_review(student_id, staff_id, review_text, rating):
+def add_review(student_id, user_id, review_text, rating):
     student = Student.query.get(student_id)
-    staff = User.query.get(staff_id)
+    user = User.query.get(user_id)
 
     if not student:
         return {"message": "Student not found."}
-    if not staff:
-        return {"message": "Staff not found."}
+    if not user:
+        return {"message": "User not found."}
 
-    new_review = Review(student_id=student_id, staff_id=staff_id, review_text=review_text, rating=rating)
+    new_review = Review(student_id=student_id, user_id=user_id, review_text=review_text, rating=rating)
     db.session.add(new_review)
     db.session.commit()
     return {"message": f"Review added successfully"}

@@ -70,11 +70,11 @@ def search_student_command(student_id):
 #add student review command
 @user_cli.command("add_review", help="Add a review for a student")
 @click.argument("student_id")
-@click.argument("staff_id")
+@click.argument("user_id")
 @click.argument("review_text")
 @click.argument("rating", type=int)
-def add_review_command(student_id, staff_id, review_text, rating):
-    result = add_review(student_id, staff_id, review_text, rating)
+def add_review_command(student_id, user_id, review_text, rating):
+    result = add_review(student_id, user_id, review_text, rating)
     print(f"Review added: {result}")
 
 #view student review command
