@@ -4,10 +4,10 @@
 
 a commandline application needs to be developed so that users can track the conduct of students, the requirements for an application such as this are as follows:
 
-1) Create Student
-2)Search Student
-3)Add Student Review
-4) View Student Reviews
+ Create Student
+ Search Student
+ Add Student Review
+  View Student Reviews
 
 
 # Commands 
@@ -17,10 +17,17 @@ a commandline application needs to be developed so that users can track the cond
 4)view_reviews - The user would be able to view the student’s reviews by entering their unique student ID into the system.
 
 # How it's entered 
-1) flask user add_student{student_id} {student name}                            example =  flask user add_student 01 "Fake Name"
-2) flask user search_student{student_id}                                        example = flask user search_student 01
-3) flask user add_review {student_id} {staff_id} {review_text} {rating}         example = flask user add_review 01 1 "good job" 5
-4) flask user view_reviews{student_id}                                          example = flask user view_reviews 01
+1) flask user add_student{student_id} {student name}   
+example =  flask user add_student 01 "Fake Name"
+
+2) flask user search_student{student_id}    
+ example = flask user search_student 01
+
+3) flask user add_review {student_id} {staff_id} {review_text} {rating}         
+example = flask user add_review 01 1 "good job" 5
+
+4) flask user view_reviews{student_id}                                          
+example = flask user view_reviews 01
 
 these show what parameters must be entered along with the command inside of the console
 
