@@ -72,9 +72,8 @@ def search_student_command(student_id):
 @click.argument("student_id")
 @click.argument("user_id")
 @click.argument("review_text")
-@click.argument("rating", type=int)
-def add_review_command(student_id, user_id, review_text, rating):
-    result = add_review(student_id, user_id, review_text, rating)
+def add_review_command(student_id, user_id, review_text):
+    result = add_review(student_id, user_id, review_text)
     print(f"Review added: {result}")
 
 #view student review command
